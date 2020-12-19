@@ -26,6 +26,7 @@ export default function Home({ isConnected }) {
 
         <p>
           <Link href="/movies">Movies</Link>
+          <br />
           <Link href="/top">Top</Link>
         </p>
 
