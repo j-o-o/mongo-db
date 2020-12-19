@@ -3,7 +3,7 @@ import { connectToDatabase } from "../util/mongodb";
 export default function Movies({ movies }) {
   return (
     <div>
-      <h1>Top 20 Movies of All Time</h1>
+      <h1>Top 1000 Movies of All Time</h1>
       <p>
         <small>(According to Metacritic)</small>
       </p>
@@ -27,7 +27,7 @@ export async function getServerSideProps() {
     .collection("movies")
     .find({})
     .sort({ metacritic: -1 })
-    .limit(20)
+    .limit(1000)
     .toArray();
 
   return {
